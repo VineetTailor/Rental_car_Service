@@ -31,7 +31,7 @@ const BookingForm = () => {
 
   function submitHandler (event) {
     event.preventDefault()
-    axios.post('http://localhost:7000/user-details', {
+    axios.post('https://car-webite.vercel.app/', {
       firstname: data.firstname,
       lastname:data.lastname,
       email:data.email,
