@@ -1,0 +1,24 @@
+.left-col{
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+.left-col-title{
+    background: grey;
+    /* padding-left: 2rem; */
+    margin-left: 3rem;
+    text-align: center;
+    color: white;
+
+}
+.right-col{
+    background-color:#F4F7FE ;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.right-col1{
+    height: 10rem;
+    width: 10rem;
+    
+    border: 1px solid gray;
+    border-radius: 2px;
+}
