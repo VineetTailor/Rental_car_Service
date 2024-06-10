@@ -61,13 +61,13 @@ const BookingForm = () => {
             key_secret: "4Bn8nSrBaFnA8gcgHmJ1mzVg",
             amount: 1 *100,
             currency: "INR",
-            name: "Rahul",
+            name: {data.firstname},
             description: "Testing",
             handler : function(response){
                 alert(response.razorpay_payment_id)
             },
             prefill: {
-                name: "rahul",
+                name: {data.firstname},
                 email: "rahulriyazpc@gmail.com",
                 contact: "7708133665",
             },
