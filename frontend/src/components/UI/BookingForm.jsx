@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/booking-form.css";
 import { Form, FormGroup } from "reactstrap";
+import Gpay from "../Payment/Gpay";
 
 
 import axios from 'axios';
@@ -144,7 +145,7 @@ const BookingForm = () => {
       </FormGroup> */}
 
  
-      
+        <Gpay/>
       
       <button className=" book" onClick={handlesubmit}>Book Now</button>
     </Form>
