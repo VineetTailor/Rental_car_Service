@@ -2,159 +2,123 @@
 
 A modern full-stack car rental website built with React.js and Node.js, featuring a beautiful UI and comprehensive booking system.
 
+---
+
 ## 🚗 Features
 
-- **Modern UI/UX**: Clean and responsive design across all devices
-- **Car Listings**: Detailed car information with high-quality images
-- **Booking System**: Easy-to-use car booking functionality
-- **Admin Panel**: Manage cars, bookings, and users
-- **Authentication**: Secure user authentication system
-- **Payment Integration**: Razorpay payment gateway integration
-- **Responsive Design**: Mobile-first approach for all screen sizes
+- Modern, responsive UI/UX
+- Car listings with detailed info and images
+- Booking system with date, time, and location selection
+- Admin panel for managing cars, bookings, and users
+- Secure authentication (JWT)
+- Payment integration (Razorpay)
+- Mobile-first design
+
+---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- React.js
-- Bootstrap
-- CSS3
-- React Router DOM
-- React Icons
-- Reactstrap
+**Frontend:** React.js, Bootstrap, CSS3, React Router DOM, React Icons, Reactstrap
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
+**Backend:** Node.js, Express.js, MongoDB, Mongoose, JWT
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
+- Node.js (v14+)
 - MongoDB
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
-```bash
-git clone https://github.com/VineetTailor/Rental_car_Service.git
-cd Rental_car_Service
-```
-
+   ```bash
+   git clone https://github.com/VineetTailor/Rental_car_Service.git
+   cd Rental_car_Service
+   ```
 2. Install Backend Dependencies
-```bash
-cd backend
-npm install
-```
-
+   ```bash
+   cd backend
+   npm install
+   ```
 3. Install Frontend Dependencies
-```bash
-cd frontend
-npm install
-```
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+4. Set up environment variables in `backend/.env`:
+   ```env
+   MONGODB_URI=your_mongodb_uri
+   PORT=7000
+   JWT_SECRET=your_jwt_secret
+   ```
+5. Start Backend
+   ```bash
+   cd ../backend
+   npm start
+   ```
+6. Start Frontend
+   ```bash
+   cd ../frontend
+   npm start
+   ```
 
-4. Set up environment variables
-Create a `.env` file in the backend directory:
-```env
-MONGODB_URI=your_mongodb_uri
-PORT=7000
-JWT_SECRET=your_jwt_secret
-```
+The app will be available at [http://localhost:3000](http://localhost:3000)
 
-5. Start the Backend Server
-```bash
-cd backend
-npm start
-```
+---
 
-6. Start the Frontend Development Server
-```bash
-cd frontend
-npm start
-```
-
-The application will be available at `http://localhost:3000`
-
-## 📱 Application Structure
+## 📁 Project Structure
 
 ```
-├── frontend/                # React frontend
-│   ├── public/             # Public assets
-│   ├── src/                # Source files
-│   │   ├── components/     # React components
-│   │   ├── pages/         # Page components
-│   │   ├── styles/        # CSS styles
-│   │   └── assets/        # Images and other assets
-│   └── package.json       # Frontend dependencies
-│
-└── backend/               # Node.js backend
-    ├── models/           # MongoDB models
-    ├── routes/          # API routes
-    ├── controllers/     # Route controllers
-    ├── middleware/      # Custom middleware
-    └── package.json     # Backend dependencies
+backend/
+  controllers/
+  model/
+  routes/
+  scripts/
+  index.js
+  package.json
+frontend/
+  public/
+  src/
+    assets/
+    components/
+    pages/
+    routers/
+    styles/
+  package.json
 ```
+
+---
 
 ## 🌟 Key Features
 
-1. **Car Management**
-   - Add, edit, and delete car listings
-   - Upload car images
-   - Manage car availability
+- Car management (add/edit/delete, images, availability)
+- Booking system (date/time/location, price calculation)
+- User features (register/login, booking history, profile, payments)
+- Admin dashboard (stats, manage cars/bookings/users)
+- Security (JWT, password encryption, validation)
+- UI (responsive, interactive, loading/error states, toast notifications)
 
-2. **Booking System**
-   - Easy booking process
-   - Date and time selection
-   - Location selection
-   - Price calculation
-
-3. **User Features**
-   - User registration and login
-   - Booking history
-   - Profile management
-   - Payment processing
-
-4. **Admin Features**
-   - Dashboard with statistics
-   - Manage car listings
-   - View and manage bookings
-   - User management
-
-## 🔒 Security Features
-
-- JWT Authentication
-- Password Encryption
-- Protected Routes
-- Input Validation
-- Error Handling
-
-## 🎨 UI Features
-
-- Responsive Design
-- Interactive Components
-- Loading States
-- Error Handling UI
-- Toast Notifications
-- Form Validation
+---
 
 ## 📝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please open an issue or submit a pull request.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License
 
 ## 👤 Author
 
-**Vineet Tailor**
-- GitHub: [@VineetTailor](https://github.com/VineetTailor)
+[Vineet Tailor](https://github.com/VineetTailor)
+
+---
 
 ## 🙏 Acknowledgments
 
-- Special thanks to all contributors
-- Car images sourced from various providers
-- UI inspiration from modern car rental websites
+- All contributors
+- Image sources: Unsplash, Pexels, etc.
+- UI inspiration from modern car rental platforms
