@@ -1,59 +1,71 @@
 import cars from '../model/cardetailmodel.js'
 
 
-export const getcardetails = (req,res)=>{
-    console.log('get requsted')
-    cars.find()
-    .then(data => res.send(data))
-    .catch(err => {console.log(err)})
+export const getcardetails = async (req, res) => {
+    try {
+        const data = await cars.find();
+        res.json(data);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 }
 
 
-export const getindividualcardetails = (req,res)=>{
-    console.log("getting individual car details")
+export const getindividualcardetails = async (req, res) => {
+    try {
+        // Try to find by car name first
+        let car = await cars.findOne({ carName: req.params.id });
+        
+        // If not found by name, try to find by ID
+        if (!car && !isNaN(req.params.id)) {
+            car = await cars.findOne({ id: parseInt(req.params.id) });
+        }
 
-    cars.findById(req.params.id)
-    .then(data =>{
-        if(data) res.send(data)
-        else res.status(404).json({error : `no record found in this id`})
-    })
-    .catch(err =>console.log(err))
-    
+        if (car) {
+            res.json(car);
+        } else {
+            res.status(404).json({ error: 'Car not found' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 }
 
-export const addcardetails = async(req,res)=>{
-    console.log("post requsted")
+export const addcardetails = async (req, res) => {
+    try {
+        const newCar = new cars({
+            id: req.body.id,
+            brand: req.body.brand,
+            carName: req.body.carName,
+            imgUrl: req.body.imgUrl,
+            model: req.body.model,
+            price: req.body.price,
+            speed: req.body.speed,
+            mileage: req.body.mileage,
+            transmission: req.body.transmission,
+            gpsNavigation: req.body.gpsNavigation,
+            heatedSeats: req.body.heatedSeats,
+            ratings: req.body.ratings,
+            description: req.body.description
+        });
 
-    const data = new cars({
-        id:req.body.id,
-        brand:req.body.brand,
-        carName:req.body.carName,
-        price:req.body.price,
-        ratings:req.body.ratings,
-        model:req.body.model,
-        speed:req.body.speed,
-        transmission:req.body.transmission,
-        gpsNavigation:req.body.gpsNavigation,
-        heatedSeats:req.body.heatedSeats,
-        description:req.body.description
-    })
-
-    const result = await data.save()
-    res.status(201).json(result)
-
-    console.log("New car data added")
+        const savedCar = await newCar.save();
+        res.status(201).json(savedCar);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 }
 
 
-export const deletecardetails = (req, res)=>{
-    console.log("delete requsted")
-
-    cars.findByIdAndDelete(req.params.id)
-    .then((data)=>{
-        if(data)res.send(data)
-        else res.status(404).json({error: `no record with this id`})
-    })
-    .catch(err =>{console.log(err)})
-    console.log("car data deleted")
-
+export const deletecardetails = async (req, res) => {
+    try {
+        const car = await cars.findOneAndDelete({ id: parseInt(req.params.id) });
+        if (car) {
+            res.json({ message: 'Car deleted successfully' });
+        } else {
+            res.status(404).json({ error: 'Car not found' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 }

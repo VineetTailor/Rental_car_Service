@@ -1,23 +1,24 @@
-import { mongoose, Schema} from "mongoose";
+import { mongoose, Schema } from "mongoose";
 
 const cardetails = new Schema({
-    id:Number,
-    brand:String,
-    carName:String,
-    price:Number,
-    ratings:Number,
-    model:Number,
-    speed:Number,
-    mileage:Number,
-    transmission:String,
-    gpsNavigation:Boolean,
-    heatedSeats:Boolean,
-    description:String
-},{versionKey:false})
+    id: Number,
+    brand: String,
+    carName: String,
+    imgUrl: String,
+    model: Number,
+    price: Number,
+    speed: Number,
+    mileage: Number,
+    transmission: String,
+    gpsNavigation: Boolean,
+    heatedSeats: Boolean,
+    ratings: Number,
+    description: String
+}, { versionKey: false });
 
 const cardetail = mongoose.model("carcol", cardetails);
 
-export default cardetail
+export default cardetail;
 
 
 // {

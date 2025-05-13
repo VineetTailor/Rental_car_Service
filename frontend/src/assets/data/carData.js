@@ -12,50 +12,48 @@ const carData = [
   {
     id: 1,
     brand: "Maruti Suzuki",
-    rating: 5,
     carName: "Maruti Suzuki Swift",
     imgUrl: img01,
-    model: "Model 3",
+    model: 2019,
     price: 5000,
-    speed: "1190CC",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
+    speed: 120,
+    mileage: 20,
+    transmission: "Automatic",
+    gpsNavigation: true,
+    heatedSeats: true,
+    ratings: 4.5,
     description: "The Maruti Suzuki Swift is known for its sporty and aerodynamic design, making it visually appealing. Its compact size makes it ideal for urban driving. The Swift is known for its peppy performance and excellent fuel efficiency. It typically comes with both petrol and diesel engine options.",
   },
-
   {
     id: 2,
-    brand: "Hyundai",
-    rating: 4,
-    carName: "Hyundai Grand i10 Nios",
+    brand: "Toyota",
+    carName: "Toyota Camry",
     imgUrl: img02,
-    model: "Model-2022",
-    price: 5000,
-    speed: "1197CC",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      "With a choice of petrol and diesel engines, the Grand i10 Nios delivers a good balance of performance and fuel efficiency. It is well-suited for both city commutes and highway drives.Hyundai is known for offering a host of features, and the Nios is no exception. Depending on the variant, it may come with features such as a touchscreen infotainment system, rearview camera, wireless charging, and more..",
+    model: 2020,
+    price: 7000,
+    speed: 150,
+    mileage: 18,
+    transmission: "Automatic",
+    gpsNavigation: true,
+    heatedSeats: true,
+    ratings: 4.7,
+    description: "The Toyota Camry is a premium sedan known for its comfort and reliability. It offers a spacious interior, smooth ride quality, and advanced safety features. The Camry is perfect for both city driving and long journeys.",
   },
-
   {
     id: 3,
-    brand: "Tata",
-    rating: 132,
-    carName: "Tata Tiago",
+    brand: "BMW",
+    carName: "BMW 3 Series",
     imgUrl: img03,
-    model: "Model-2022",
-    price: 4500,
-    speed: "1100CC",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
-    automatic: "Automatic",
-    description:
-      " The Tata Tiago stands out with its stylish design and compact dimensions. It features Tata's Impact Design Philosophy, giving it a modern and attractive appearance.The Tiago is equipped with safety features such as dual airbags, ABS with EBD, and corner stability control. This focus on safety is noteworthy in its segment.",
+    model: 2021,
+    price: 9000,
+    speed: 180,
+    mileage: 15,
+    transmission: "Automatic",
+    gpsNavigation: true,
+    heatedSeats: true,
+    ratings: 4.9,
+    description: "The BMW 3 Series is a luxury sports sedan that combines performance with elegance. It features powerful engine options, precise handling, and premium interior materials. The car comes with advanced technology features and driver assistance systems.",
   },
-
   {
     id: 4,
     brand: "Ford",
@@ -71,7 +69,6 @@ const carData = [
     description:
       "The Ford EcoSport is known for its robust build quality, making it suitable for those who appreciate a sturdy and reliable vehicle.Ford is renowned for producing cars with engaging driving dynamics, and the EcoSport is no exception. It offers a fun and confident driving experience.",
   },
-
   {
     id: 5,
     brand: "Mahindra",
@@ -87,7 +84,6 @@ const carData = [
     description:
       " The Mahindra Bolero is known for its robust and rugged design, making it a popular choice, especially in rural and semi-urban areas. It is designed to tackle rough terrains with ease.The Bolero offers a spacious cabin with a focus on practicality. The rear seats are often designed for comfort, and the vehicle is capable of accommodating a larger number of passengers.",
   },
-
   {
     id: 6,
     brand: "Volkswagen",
@@ -103,7 +99,6 @@ const carData = [
     description:
       "Volkswagen is known for its superior build quality, and the Polo is a testament to that. It offers a solid and sturdy build, providing a sense of safety and durability.The Polo is appreciated for its excellent driving dynamics, offering a balanced and responsive driving experience. It's often considered by enthusiasts for its handling and performance.",
   },
-
   {
     id: 7,
     brand: "Audi",
@@ -119,7 +114,6 @@ const carData = [
     description:
       "Audi is known for its superior build quality, and the Polo is a testament to that. It offers a solid and sturdy build, providing a sense of safety and durability.The Polo is appreciated for its excellent driving dynamics, offering a balanced and responsive driving experience. It's often considered by enthusiasts for its handling and performance. ",
   },
-
   {
     id: 8,
     brand: "Colorado",
