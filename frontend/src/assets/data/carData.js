@@ -1,12 +1,12 @@
 // import all images from assets/images directory
-import img01 from "../all-images/cars-img/nissan-offer.png";
-import img02 from "../all-images/cars-img/offer-toyota.png";
-import img03 from "../all-images/cars-img/bmw-offer.png";
-import img04 from "../all-images/cars-img/nissan-offer.png";
-import img05 from "../all-images/cars-img/offer-toyota.png";
-import img06 from "../all-images/cars-img/mercedes-offer.png";
-import img07 from "../all-images/cars-img/toyota-offer-2.png";
-import img08 from "../all-images/cars-img/mercedes-offer.png";
+const img01 = "/images/cars-img/pexels-04iraq-1272398525-29779238.jpg";
+const img02 = "/images/cars-img/pexels-julian-largo-622163228-18003058.jpg";
+const img03 = "/images/cars-img/pexels-mikebirdy-244206.jpg";
+const img04 = "/images/cars-img/pexels-lee-chinyama-92380529-9703688.jpg";
+const img05 = "/images/cars-img/pexels-egeardaphotos-2148533277-30834886.jpg";
+const img06 = "/images/cars-img/pexels-egeardaphotos-2148533277-30834886.jpg";
+const img07 = "/images/cars-img/pexels-saimon-6040846.jpg";
+const img08 = "/images/cars-img/pexels-mikebirdy-244206.jpg";
 
 const carData = [
   {

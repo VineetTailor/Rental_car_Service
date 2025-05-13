@@ -1,10 +1,7 @@
 import React from "react";
 import "../../styles/become-driver.css";
 import { Link } from "react-router-dom";
-
 import { Container, Row, Col } from "reactstrap";
-
-import driverImg from "../../assets/all-images/toyota-offer-2.png";
 
 const BecomeDriverSection = () => {
   return (
@@ -12,7 +9,7 @@ const BecomeDriverSection = () => {
       <Container>
         <Row>
           <Col lg="6" md="6" sm="12" className="become__driver-img">
-            <img src={driverImg} alt="" className="w-100" />
+            <img src="/images/cars-img/pexels-julian-largo-622163228-18003058.jpg" alt="" className="w-100" />
           </Col>
 
           <Col lg="6" md="6" sm="12">
